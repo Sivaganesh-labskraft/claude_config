@@ -1,0 +1,61 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "excel": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@negokaz/excel-mcp-server"
+      ],
+      "env": {
+        "EXCEL_MCP_PAGING_CELLS_LIMIT": "4000"
+      }
+    },
+    "rest-api": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dkmaker-mcp-rest-api"
+      ],
+      "env": {
+        "REST_BASE_URL": "https://api.restful-api.dev/objects",
+        "REST_ENABLE_SSL_VERIFY": "false",
+        "HEADER_X-API-Version": "2.0",
+        "HEADER_Custom-Client": "my-client",
+        "HEADER_Accept": "application/json"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/as3/Desktop",
+        "/Users/as3/Documents",
+        "/Users/as3/Downloads"
+      ]
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true,
+    "remoteToolsDeviceName": "elsblrm-406225",
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    }
+  }
+}
